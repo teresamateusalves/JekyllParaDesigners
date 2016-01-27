@@ -1,0 +1,10 @@
+# Site settings
+title: SiteTITLE
+description: Awesome Site Description
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+exclude: ["package.json","dist","src","LICENSE","CONTRIBUTING.md","bower.json","Gruntfile.js","node_modules","README.md","test", "less", "config.codekit"]
+

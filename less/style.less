@@ -1,0 +1,158 @@
+@import "x_reset.less";
+@import "x_variables.less";
+@import "x_mixins.less";
+///////////////////////////////////////
+
+
+html { font-size:1em; background-color:@lighter-grey; }
+
+a {
+	color:@main-color;
+	&:hover, &:focus, &:active {
+		color:darken(@main-color,20%); 
+	}
+}
+
+
+///////////////////////////////////////
+/* Elastic STRUCTURE | Show/Hide */
+///////////////////////////////////////
+body.ink-drawer {
+
+	.drawer {}
+
+	.content-drawer {
+
+		#header {
+			.ink-grid {}
+
+			.btn-menu-show {
+				@media screen and (min-width:768px) {
+					display:none;
+				}
+			}
+		}
+
+		.ink-navigation { // hides main menu & footer menu in smaller sizes
+			.ink-grid {}
+
+			display:none;
+			@media screen and (min-width:768px) {
+				display:block;
+			}
+		}
+
+		.page-contents {
+			.ink-grid {}
+		}
+
+		#footer {
+			.ink-grid {}
+		}
+	}
+}
+.ink-grid {}
+
+
+///////////////////////////////////////
+/* Block Background Colors */
+///////////////////////////////////////
+#header {
+	background:@light-grey;
+}
+#top-menu {
+	background:@lighter-grey;
+}
+#footer {
+	background:@light-grey;
+}
+
+///////////////////////////////////////
+/* MENUS */
+///////////////////////////////////////
+nav.ink-navigation {
+
+	// Generic features common to all menus
+	ul {
+		li {
+			a {
+				&:hover, &:focus, &:active {
+
+				}
+			}
+		}
+		li.active {
+			a {
+				&:hover, &:focus, &:active {
+					
+				}
+			}
+		}
+	}
+	
+	// Specific Overrides
+	ul.drawer-menu {
+		li {
+			a {
+				&:hover, &:focus, &:active {
+					
+				}
+			}
+		}
+		li.active {
+			a {
+				&:hover, &:focus, &:active {
+					
+				}
+			}
+		}
+	}
+
+	ul.main-menu {
+		li {
+			a {
+				&:hover, &:focus, &:active {
+					
+				}
+			}
+		}
+		li.active {
+			a {
+				&:hover, &:focus, &:active {
+					
+				}
+			}
+		}
+	}
+
+	ul.footer-menu {
+		li {
+			a {
+				&:hover, &:focus, &:active {
+					
+				}
+			}
+		}
+		li.active {
+			a {
+				&:hover, &:focus, &:active {
+					
+				}
+			}
+		}
+	}
+
+	ul.social-menu {
+		li {
+			a {
+				span {  
+					.hide-text();
+				}
+			}
+		}
+	}
+
+}
+
+
+

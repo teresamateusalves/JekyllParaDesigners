@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Site name</title>
+
+	<meta name="description" content="_DINAMIC_INFO_">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+
+	<meta property="og:title" content="_DINAMIC_INFO_">
+	<meta property="og:url" content="_DINAMIC_INFO_">
+	<meta property="og:site_name" content="_DINAMIC_INFO_">
+	<meta property="fb:admins" content="_DINAMIC_INFO_">
+	<meta property="og:description" content="_DINAMIC_INFO_">
+
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="http://localhost:4000/imgs/icons/favicon.ico" type="image/x-icon">
+
+	<!-- ADD TO HOME SCREEN ICONS -->
+	<link rel="icon" sizes="192x192" href="http://localhost:4000/imgs/icons/touch-icon-192.png">
+	<link rel="icon" sizes="128x128" href="http://localhost:4000/imgs/icons/touch-icon-128.png">
+	<link rel="apple-touch-icon" href="http://localhost:4000/imgs/icons/touch-icon-60.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:4000/imgs/icons/touch-icon-76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:4000/imgs/icons/touch-icon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:4000/imgs/icons/touch-icon-152.png">
+
+	<!-- STYLE SHEETS 
+		 Appart from conditionaly commented styles, all others will be concatenated in a single project style sheet -->
+
+	<!--[if IE]>
+			<link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/1/ink-ie.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<![endif]-->
+
+	<!--[if IE 7]>
+		 <link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/1/ink-ie7.css">
+		 <link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/1/font-awesome-ie7.min.css">
+			<link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/4/ie7.css">
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+			<link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/9/ie-old.css">
+			<link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/1/ink-ltie9-min.css">
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- INK -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.1.1/css/ink.min.css">
+	<!-- FONT AWESOME -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- PROJECT STYLE-->
+	<link rel="stylesheet" type="text/css" href="http://localhost:4000/css/style.css">
+</head>
+
+
+<body class="ink-drawer {{page.id}}">
+
+	<!--[if lte IE 9 ]>
+		<div class="ink-alert basic" role="alert">
+			<button class="ink-dismiss">&times;</button>
+			<p><strong>You are using an outdated Internet Explorer version.</strong>
+				Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> to improve your web experience.
+			</p>
+		</div>
+	<![endif]-->
+
+
+	<!-- DRAWER MAIN MENU -->
+	<div class="right-drawer drawer">
+		<!-- MENU ITEMS -->
+		<nav class="ink-navigation">
+			<ul class="menu vertical drawer-menu">	
+				{% include menu-items.html %}
+			</ul>
+		</nav>
+	</div>
+	<!-- end DRAWER MAIN MENU -->
+
+
+	<!-- CONTENT DRAWER: allows content to slide aside to show mobile menu -->
+	<div class="content-drawer">
+
+		<!-- HEADER -->
+		<div id="header">
+
+			<div class="ink-grid">
+
+				<h1>Site name</h1>
+				<p class="site-description">Site description</p>
+
+				<!-- MENU BUTTON TO DRAWER -->
+				<div id="btn-menu-show" class="btn-menu-show">
+					<a id="open-drawer" class="right-drawer-trigger">
+						<span class="show-menu">Menu</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- TOP MAIN MENU -->
+		<div id="top-menu">
+			<div class="ink-grid">
+				<nav class="ink-navigation">
+					<ul class="menu horizontal main-menu">
+
+						{% include menu-items.html %}
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- end TOP MAIN MENU -->
+
+
+		<section class="page-contents">
+
+			<div class="ink-grid">
+				{{ content }}
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<div class="ink-grid">
+
+				<!-- TOP MAIN MENU -->
+				<nav class="ink-navigation">
+					<ul class="menu horizontal footer-menu">
+					   {% include menu-items.html %}
+					</ul>
+				</nav>
+				<!-- end TOP MAIN MENU -->
+
+				{% include menu-social.html %}
+
+			</div>
+		</footer>
+		<!-- end FOOTER -->
+		
+
+	</div>
+	<!-- end CONTENT DRAWER -->
+
+	<!-- JAVASCRIPT -->
+	<script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.9/js/ink-all.min.js"></script>
+	<script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.1/js/autoload.js"></script>
+
+	<!--[if IE 8]>
+	<script type="text/javascript" src="http://imgs.sapo.pt/ink/assets/js/html5shiv.js"></script>
+	<script type="text/javascript" src="http://imgs.sapo.pt/ink/assets/js/html5shiv-printshiv.js"></script>
+	<script type="text/javascript" src="http://imgs.sapo.pt/ink/assets/js/respond.src.js"></script> 
+	<![endif]-->
+
+	<!-- Jquery 2.1.4 -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+
+	<!-- Masonry jQuery plugin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$('#myGrid').masonry({
+			itemSelector: '.gridBox'
+		});
+	</script>
+
+</body>
+</html>
