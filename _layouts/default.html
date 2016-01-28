@@ -6,70 +6,64 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Site name</title>
+	<!-- TITLES -->
+	<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+	{% if page.title %}
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta property="twitter:title" content="{{ page.title }}" />
+	{% endif %}
 
-	<meta name="description" content="_DINAMIC_INFO_">
+	<!-- DESCRIPTION -->
+	{% if page.excerpt %}
+	<meta name="description" content="{{ page.excerpt| strip_html }}" />
+	<meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+	{% else %}
+	<meta name="description" content="{{ site.description }}">
+	<meta property="og:description" content="{{ site.description }}" />
+	{% endif %}
+
+	<!-- VIEWPORT -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+	<!-- MOBILE -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 
-	<meta property="og:title" content="_DINAMIC_INFO_">
-	<meta property="og:url" content="_DINAMIC_INFO_">
-	<meta property="og:site_name" content="_DINAMIC_INFO_">
-	<meta property="fb:admins" content="_DINAMIC_INFO_">
-	<meta property="og:description" content="_DINAMIC_INFO_">
-
 	<!-- FAVICON -->
-	<link rel="shortcut icon" href="http://localhost:4000/imgs/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/x-icon" href="/imgs/icons/favicon.ico">
 
-	<!-- ADD TO HOME SCREEN ICONS -->
-	<link rel="icon" sizes="192x192" href="http://localhost:4000/imgs/icons/touch-icon-192.png">
-	<link rel="icon" sizes="128x128" href="http://localhost:4000/imgs/icons/touch-icon-128.png">
-	<link rel="apple-touch-icon" href="http://localhost:4000/imgs/icons/touch-icon-60.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:4000/imgs/icons/touch-icon-76.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:4000/imgs/icons/touch-icon-120.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:4000/imgs/icons/touch-icon-152.png">
+	<!-- ADD TO HOME SCREEN ICONS ANDROID -->
+	<link rel="icon" sizes="192x192" href="/imgs/icons/android-192.png">
+	<link rel="icon" sizes="144x144" href="/imgs/icons/android-144.png">
+	<link rel="icon" sizes="96x96" href="/imgs/icons/android-96.png">
+	<link rel="icon" sizes="72x72" href="/imgs/icons/android-72.png">
+	<link rel="icon" sizes="48x48" href="/imgs/icons/android-48.png">
 
-	<!-- STYLE SHEETS 
-		 Appart from conditionaly commented styles, all others will be concatenated in a single project style sheet -->
+	<!-- ADD TO HOME SCREEN ICONS iOS -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/imgs/icons/ios-180.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/imgs/icons/ios-167.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/imgs/icons/ios-152.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/imgs/icons/ios-144.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/imgs/icons/ios-120.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/imgs/icons/ios-114.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/imgs/icons/ios-76.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/imgs/icons/ios-72.png">
+	<link rel="apple-touch-icon" sizes="60x0" href="/imgs/icons/ios-60.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/imgs/icons/ios-57.png">
 
-	<!--[if IE]>
-			<link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/1/ink-ie.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<![endif]-->
+	<!-- FONTS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200'>
 
-	<!--[if IE 7]>
-		 <link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/1/ink-ie7.css">
-		 <link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/1/font-awesome-ie7.min.css">
-			<link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/4/ie7.css">
-	<![endif]-->
-
-	<!--[if lt IE 9]>
-			<link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/9/ie-old.css">
-			<link rel="stylesheet" href="http://i.n.sl.pt/sswp/css/1/ink-ltie9-min.css">
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<!-- INK -->
-	<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.1.1/css/ink.min.css">
-	<!-- FONT AWESOME -->
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- INK STYLE -->
+	<link rel="stylesheet" type="text/css" href="https://ink.global.ssl.fastly.net/3.1.10/css/ink.min.css">
 
 	<!-- PROJECT STYLE-->
-	<link rel="stylesheet" type="text/css" href="http://localhost:4000/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 
 <body class="ink-drawer {{page.id}}">
-
-	<!--[if lte IE 9 ]>
-		<div class="ink-alert basic" role="alert">
-			<button class="ink-dismiss">&times;</button>
-			<p><strong>You are using an outdated Internet Explorer version.</strong>
-				Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> to improve your web experience.
-			</p>
-		</div>
-	<![endif]-->
-
 
 	<!-- DRAWER MAIN MENU -->
 	<div class="right-drawer drawer">
@@ -82,7 +76,6 @@
 	</div>
 	<!-- end DRAWER MAIN MENU -->
 
-
 	<!-- CONTENT DRAWER: allows content to slide aside to show mobile menu -->
 	<div class="content-drawer">
 
@@ -91,8 +84,16 @@
 
 			<div class="ink-grid">
 
-				<h1>Site name</h1>
-				<p class="site-description">Site description</p>
+				<div class="column-group">
+					<div class="site-id all-70">
+						<h1><a href="/">Site name</a></h1>
+						<p class="site-description">Site description</p>
+					</div>
+					<div class="top-search all-30">
+						{% include search-form.html %}
+					</div>
+				</div>
+				
 
 				<!-- MENU BUTTON TO DRAWER -->
 				<div id="btn-menu-show" class="btn-menu-show">
@@ -158,17 +159,6 @@
 	<script type="text/javascript" src="http://imgs.sapo.pt/ink/assets/js/html5shiv-printshiv.js"></script>
 	<script type="text/javascript" src="http://imgs.sapo.pt/ink/assets/js/respond.src.js"></script> 
 	<![endif]-->
-
-	<!-- Jquery 2.1.4 -->
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
-
-	<!-- Masonry jQuery plugin -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$('#myGrid').masonry({
-			itemSelector: '.gridBox'
-		});
-	</script>
 
 </body>
 </html>

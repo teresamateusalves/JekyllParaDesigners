@@ -51,8 +51,12 @@ body.ink-drawer {
 		}
 	}
 }
-.ink-grid {}
-
+.ink-grid {
+	.max-width();
+}
+.top-search {
+	float:right;
+}
 
 ///////////////////////////////////////
 /* Block Background Colors */
@@ -61,15 +65,21 @@ body.ink-drawer {
 	background:@light-grey;
 }
 #top-menu {
-	background:@lighter-grey;
+	background:@light-grey;
+	border-bottom:@dark-border;
 }
 #footer {
 	background:@light-grey;
+	border-top:@dark-border;
 }
 
 ///////////////////////////////////////
 /* MENUS */
 ///////////////////////////////////////
+#top-menu {
+	margin-bottom:2em;
+}
+
 nav.ink-navigation {
 
 	// Generic features common to all menus
@@ -83,8 +93,10 @@ nav.ink-navigation {
 		}
 		li.active {
 			a {
+				background:@almost-white;
+				text-decoration:none;
 				&:hover, &:focus, &:active {
-					
+					cursor:default;
 				}
 			}
 		}
@@ -109,6 +121,7 @@ nav.ink-navigation {
 	}
 
 	ul.main-menu {
+
 		li {
 			a {
 				&:hover, &:focus, &:active {
@@ -118,15 +131,15 @@ nav.ink-navigation {
 		}
 		li.active {
 			a {
-				&:hover, &:focus, &:active {
-					
-				}
+				
 			}
 		}
 	}
 
 	ul.footer-menu {
+		text-align:center;
 		li {
+			float:none !important; display:inline-block;
 			a {
 				&:hover, &:focus, &:active {
 					
@@ -143,7 +156,10 @@ nav.ink-navigation {
 	}
 
 	ul.social-menu {
+		border-top:@dark-border;
+		text-align:center;
 		li {
+			float:none !important; display:inline-block;
 			a {
 				span {  
 					.hide-text();
@@ -151,8 +167,44 @@ nav.ink-navigation {
 			}
 		}
 	}
-
 }
 
 
+///////////////////////////////////////
+/* CONTENT */
+///////////////////////////////////////
+
+// Títulos das páginas
+h2.page-title {
+	.hide-text();
+}
+
+// Imagens
+img {
+	margin:0 auto 1em;
+}
+
+// Highlights
+.highlight {
+	margin-bottom:2em;
+}
+
+// texto nos blocos pequenos
+.content-block {
+	p {
+		font-size:0.85em;
+	}
+}
+
+// text preto em parágrafos dentro de <a>
+a {
+	p {
+		color:@almost-black;
+	}
+	&:hover, &:focus, &:active {
+		p {
+			color:@main-color;
+		}				
+	}
+}
 
