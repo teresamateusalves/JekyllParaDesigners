@@ -1,0 +1,22 @@
+---
+layout: default
+id: article
+---
+
+
+<article>
+	<head>
+		<h1 class="article-title">Título de um qualquer artigo</h1>
+		<img src="http://lorempixel.com/960/320/people/5">
+		<p>Este é um artigo mas poderia ser qualquer outro tipo de conteúdo, dependendo do que precisas para o site que estás a desenhar</p>
+	</head>
+	<div class="article-body">
+		<p>Parágrafo (do grego: paragraphos, "escrever ao lado" ou "escrito ao lado") é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular.</p>
+		<p>É uma seca repetir sempre a mesma coisa e por isso poderá fazer sentido ter vários parágrafos ou conjuntos de parágrafos em templates (pasta _includes) para reutilizar (include) onde se pretender conteúdo dimmy para testar o layout.</p>
+		<p>A paginação abaixo é, também, exemplificativa, pois só fará sentido em artigos de várias páginas.</p>
+	</div>
+	<footer>
+		{% include pagination.html %}
+	</footer>
+</article>
+
