@@ -1,10 +1,19 @@
 # Site settings
 title: SiteTITLE
 description: Awesome Site Description
+timezone: 	 Europe/Lisbon
+
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "" 	# the base hostname & protocol for your site
 
-# Build settings
-markdown: kramdown
-exclude: ["package.json","dist","src","LICENSE","CONTRIBUTING.md","bower.json","Gruntfile.js","node_modules","README.md","test", "less", "config.codekit"]
+markdown: 	redcarpet
 
+redcarpet:
+  extensions: ['no_intra_emphasis','autolink','strikethrough','superscript','quote','fenced_code_blocks']
+
+# Exclude from building
+exclude: ['config.codekit','README.md','_less','_samples','_site']
+
+
+# Include in building
+include: ['imgs']
