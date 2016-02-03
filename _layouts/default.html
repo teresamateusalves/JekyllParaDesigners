@@ -2,18 +2,27 @@
 <html lang="pt">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- SUPORTE PARA IE8 E IE9 -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<!-- TITLES -->
+	<!-- CODIFICAÇÃO DE CARACTERES (UNICODE) -->
+	<meta charset="utf-8">
+
+	<!-- ESCALA E ZOOM DA VIEWPORT -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+	<!-- OPTIMIZADO PARA MOBILE -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+
+	<!-- TÍTULO -->
 	<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 	{% if page.title %}
 	<meta property="og:title" content="{{ page.title }}" />
 	<meta property="twitter:title" content="{{ page.title }}" />
 	{% endif %}
 
-	<!-- DESCRIPTION -->
+	<!-- DESCRIÇÃO -->
 	{% if page.excerpt %}
 	<meta name="description" content="{{ page.excerpt| strip_html }}" />
 	<meta property="og:description" content="{{ page.excerpt| strip_html }}" />
@@ -22,24 +31,15 @@
 	<meta property="og:description" content="{{ site.description }}" />
 	{% endif %}
 
-	<!-- VIEWPORT -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-	<!-- MOBILE -->
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
-
-	<!-- FAVICON -->
+	<!-- ICONs -->
 	<link rel="icon" type="image/x-icon" href="/imgs/icons/favicon.ico">
-
-	<!-- ADD TO HOME SCREEN ICONS ANDROID -->
+	<!-- add to home screen icons Android -->
 	<link rel="icon" sizes="192x192" href="/imgs/icons/android-192.png">
 	<link rel="icon" sizes="144x144" href="/imgs/icons/android-144.png">
 	<link rel="icon" sizes="96x96" href="/imgs/icons/android-96.png">
 	<link rel="icon" sizes="72x72" href="/imgs/icons/android-72.png">
 	<link rel="icon" sizes="48x48" href="/imgs/icons/android-48.png">
-
-	<!-- ADD TO HOME SCREEN ICONS iOS -->
+	<!-- add to home screen icons iOS -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/imgs/icons/ios-180.png">
 	<link rel="apple-touch-icon" sizes="167x167" href="/imgs/icons/ios-167.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="/imgs/icons/ios-152.png">
@@ -65,7 +65,7 @@
 
 <body class="ink-drawer {{page.id}}">
 
-	<!-- DRAWER MAIN MENU -->
+	<!-- MENU "ESCONDIDO" NA GAVETA -->
 	<div class="right-drawer drawer">
 		<!-- MENU ITEMS -->
 		<nav class="ink-navigation">
@@ -74,39 +74,43 @@
 			</ul>
 		</nav>
 	</div>
-	<!-- end DRAWER MAIN MENU -->
+	<!-- end MENU "ESCONDIDO" -->
 
-	<!-- CONTENT DRAWER: allows content to slide aside to show mobile menu -->
+	<!-- CONTENT DRAWER: "GAVETA DE CONTEÚDO" - PORQUE ESTA DIV SE DESVIA PARA MOSTRAR O MENU -->
 	<div class="content-drawer">
 
-		<!-- HEADER -->
+		<!-- CABEÇALHO DO SITE -->
 		<div id="header">
-
 			<div class="ink-grid">
 
+				<!-- IDENTIFICAÇÃO DO PROJECTO -->
 				<div class="column-group">
 					<div class="site-id all-70">
 						<h1><a href="/">Site name</a></h1>
 						<p class="site-description">Site description</p>
 					</div>
 					<div class="top-search all-30">
+
 						{% include search-form.html %}
+
 					</div>
 				</div>
-				
+				<!-- end IDENTIFICAÇÃO DO PROJECTO -->
 
-				<!-- MENU BUTTON TO DRAWER -->
+				<!-- BOTÃO "MENU" PARA ABRIR A "GAVETA" E MOSTRAR O MENU -->
 				<div id="btn-menu-show" class="btn-menu-show">
 					<a id="open-drawer" class="right-drawer-trigger">
 						<span class="show-menu">Menu</span>
 					</a>
 				</div>
+				<!-- end BOTÃO "MENU" -->
 
 			</div>
 		</div>
+		<!-- end CABEÇALHO DO SITE -->
 
 
-		<!-- TOP MAIN MENU -->
+		<!-- MENU PRINCIPAL NO TOPO -->
 		<div id="top-menu">
 			<div class="ink-grid">
 				<nav class="ink-navigation">
@@ -118,37 +122,42 @@
 				</nav>
 			</div>
 		</div>
-		<!-- end TOP MAIN MENU -->
+		<!-- end MENU PRINCIPAL NO TOPO -->
 
 
+		<!-- CONTEÚDO -->
 		<section class="page-contents">
-
 			<div class="ink-grid">
+
 				{{ content }}
+
 			</div>
 		</section>
+		<!-- end CONTEÚDO -->
 
-		<!-- FOOTER -->
+
+		<!-- RODAPÉ -->
 		<footer id="footer">
 			<div class="ink-grid">
 
-				<!-- TOP MAIN MENU -->
+				<!-- MENU PRINCIPAL NO RODAPÉ -->
 				<nav class="ink-navigation">
 					<ul class="menu horizontal footer-menu">
 					   {% include menu-items.html %}
 					</ul>
 				</nav>
-				<!-- end TOP MAIN MENU -->
+				<!-- end MENU PRINCIPAL NO RODAPÉ -->
 
 				{% include menu-social.html %}
 
 			</div>
 		</footer>
-		<!-- end FOOTER -->
-		
+		<!-- end RODAPÉ -->
+
 
 	</div>
 	<!-- end CONTENT DRAWER -->
+
 
 	<!-- JAVASCRIPT -->
 	<script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.9/js/ink-all.min.js"></script>
