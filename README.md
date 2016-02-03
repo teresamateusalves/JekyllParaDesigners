@@ -1,9 +1,9 @@
-# Basic Jekyll Template
+# Jekyll para designers
 Maquetes funcionais num instante
 
 
 ## O que é isto
-Este repositório é uma base de trabalho para explorar e aprender a utilizar Jekyll para construir maquetes funcionais. 
+Este repositório é uma base de trabalho para explorar e aprender a utilizar Jekyll para construir maquetes funcionais de forma ágil. 
 
 
 ## Como utilizar este repositório?
