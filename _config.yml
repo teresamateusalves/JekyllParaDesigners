@@ -12,7 +12,7 @@ redcarpet:
   extensions: ['no_intra_emphasis','autolink','strikethrough','superscript','quote','fenced_code_blocks']
 
 # Exclude from building
-exclude: ['config.codekit','README.md','_less','_samples','_site']
+exclude: ['config.codekit','README.md','_less','_site']
 
 
 # Include in building
