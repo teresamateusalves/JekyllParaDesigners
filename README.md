@@ -1,5 +1,5 @@
 # Jekyll para designers
-Maquetes funcionais num instante
+Sites estáticos num instante
 
 
 ## O que é isto
