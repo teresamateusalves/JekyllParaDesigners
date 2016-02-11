@@ -1,0 +1,85 @@
+
+{% include page-start.html %}
+
+<body class="ink-drawer {{page.id}}">
+
+	<!-- MENU "ESCONDIDO" NA GAVETA -->
+	<div class="right-drawer drawer">
+		<!-- MENU ITEMS -->
+		<nav class="ink-navigation">
+			<ul class="menu vertical drawer-menu">	
+				{% include menu_principal_itens.html %}
+			</ul>
+		</nav>
+	</div>
+	<!-- end MENU "ESCONDIDO" -->
+
+	<!-- CONTENT DRAWER: "GAVETA DE CONTEÚDO" - PORQUE ESTA DIV SE DESVIA PARA MOSTRAR O MENU -->
+	<div class="content-drawer">
+
+		<!-- CABEÇALHO DO SITE -->
+		<div id="header">
+			<div class="ink-grid">
+
+				<!-- BOTÃO "MENU" PARA ABRIR A "GAVETA" E MOSTRAR O MENU -->
+				<div id="btn-menu-show" class="btn-menu-show">
+					<a id="open-drawer" class="right-drawer-trigger">
+						<span class="show-menu">Menu</span>
+					</a>
+				</div>
+				<!-- end BOTÃO "MENU" -->
+
+			</div>
+		</div>
+		<!-- end CABEÇALHO DO SITE -->
+
+
+		<!-- MENU PRINCIPAL NO TOPO -->
+		<div id="top-menu">
+			<div class="ink-grid">
+				<nav class="ink-navigation">
+					<ul class="menu horizontal main-menu">
+
+						{% include menu_principal_itens.html %}
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- end MENU PRINCIPAL NO TOPO -->
+
+
+		<!-- CONTEÚDO -->
+		<section class="page-contents">
+			<div class="ink-grid">
+
+				{{ content }}
+
+			</div>
+		</section>
+		<!-- end CONTEÚDO -->
+
+
+		<!-- RODAPÉ -->
+		<footer id="footer">
+			<div class="ink-grid">
+
+				<!-- MENU PRINCIPAL NO RODAPÉ -->
+				<nav class="ink-navigation">
+					<ul class="menu horizontal footer-menu">
+					   {% include menu_principal_itens.html %}
+					</ul>
+				</nav>
+				<!-- end MENU PRINCIPAL NO RODAPÉ -->
+
+				{% include menu_social.html %}
+
+			</div>
+		</footer>
+		<!-- end RODAPÉ -->
+
+
+	</div>
+	<!-- end CONTENT DRAWER -->
+
+{% include page-end.html %}
