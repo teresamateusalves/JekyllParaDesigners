@@ -144,6 +144,7 @@ nav.ink-navigation ul.footer-menu li {
 }
 nav.ink-navigation ul.social-menu {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 nav.ink-navigation ul.social-menu li {
@@ -188,4 +189,17 @@ a:hover p,
 a:focus p,
 a:active p {
   color: #be1c1c;
+}
+.tools {
+  text-align: center;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+}
+.tools p {
+  margin: 1em 0;
 }
