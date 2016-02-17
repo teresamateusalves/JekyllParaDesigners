@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -16,14 +15,18 @@
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 
-	<!-- TÍTULO -->
-	<title></title>
+	<!-- TÍTULOS -->
+	<title>Descrição do conteúdo da secção 4 – Jekyll para designers</title>
+	
+	
+	<meta property="og:title" content="Descrição do conteúdo da secção 4" />
+	<meta property="twitter:title" content="Descrição do conteúdo da secção 4" />
 	
 
 	<!-- DESCRIÇÃO -->
 	
-	<meta name="description" content="Awesome Site Description">
-	<meta property="og:description" content="Awesome Site Description" />
+	<meta name="description" content="Descrição da página 4 do teu projecto" />
+	<meta property="og:description" content="Descrição da página 4 do teu projecto" />
 	
 
 	<!-- ICONs -->
@@ -57,7 +60,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body class="ink-drawer page2">
+<body class="ink-drawer page4">
 
 	<!-- MENU "ESCONDIDO" NA GAVETA -->
 	<div class="right-drawer drawer">
@@ -73,7 +76,7 @@
 	<a href="page1.html">page1</a>
 </li>
 
-<li class="page2 active">
+<li class="page2 ">
 	<a href="page2.html">page2</a>
 </li>
 
@@ -81,7 +84,7 @@
 	<a href="page3.html">page3</a>
 </li>
 
-<li class="page4 ">
+<li class="page4 active">
 	<a href="page4.html">page4</a>
 </li>
 
@@ -99,8 +102,8 @@
 	</div>
 	<!-- end MENU "ESCONDIDO" -->
 
-	<!-- CONTENT DRAWER: "GAVETA DE CONTEÚDO" - PORQUE ESTA DIV SE DESVIA PARA MOSTRAR O MENU -->
-	<div class="content-drawer">
+	<!-- OVERAL PAGE -->
+	<div class="overal-page content-drawer">
 
 		<!-- CABEÇALHO DO SITE -->
 		<div id="header">
@@ -142,7 +145,6 @@
 		</div>
 		<!-- end CABEÇALHO DO SITE -->
 
-
 		<!-- MENU PRINCIPAL NO TOPO -->
 		<div id="top-menu">
 			<div class="ink-grid">
@@ -158,7 +160,7 @@
 	<a href="page1.html">page1</a>
 </li>
 
-<li class="page2 active">
+<li class="page2 ">
 	<a href="page2.html">page2</a>
 </li>
 
@@ -166,7 +168,7 @@
 	<a href="page3.html">page3</a>
 </li>
 
-<li class="page4 ">
+<li class="page4 active">
 	<a href="page4.html">page4</a>
 </li>
 
@@ -179,61 +181,25 @@
 </li>
 
 
-
+						
 					</ul>
 				</nav>
 			</div>
 		</div>
 		<!-- end MENU PRINCIPAL NO TOPO -->
 
-
-		<!-- CONTEÚDO -->
-		<section class="page-contents">
-			<div class="ink-grid">
-
-				<h2 class="page-title">Page title</h2>
-
+		<!-- CONTEÚDO DO LAYOUT DEFAULT -->
+		
 <div class="highlight">
 	<a href="article-detail.html">
 		<!-- imagem de lorempixel.com -->
-		<img src="http://lorempixel.com/960/320/sports/1">
+		<img src="http://lorempixel.com/960/320/city/1">
 		<!-- /imagem de lorempixel.com -->
 
 		<p>Parágrafo (do grego: paragraphos, "escrever ao lado" ou "escrito ao lado") é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular.</p>
 	</a>
 </div>
 
-<div class="content-block">
-	<ul class="column-group gutters">
-		<li class="all-100 large-33 xlarge-33">
-			<a href="article-detail.html">
-				<!-- imagem de lorempixel.com -->
-				<img src="http://lorempixel.com/960/320/city/2">
-				<!-- /imagem de lorempixel.com -->
-
-				<p>Parágrafo (do grego: paragraphos, "escrever ao lado" ou "escrito ao lado") é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular.</p>
-			</a>
-		</li>
-		<li class="all-100 large-33 xlarge-33">
-			<a href="article-detail.html">
-				<!-- imagem de lorempixel.com -->
-				<img src="http://lorempixel.com/960/320/city/3">
-				<!-- /imagem de lorempixel.com -->
-
-				<p>Parágrafo (do grego: paragraphos, "escrever ao lado" ou "escrito ao lado") é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular.</p>
-			</a>
-		</li>
-		<li class="all-100 large-33 xlarge-33">
-			<a href="article-detail.html">
-				<!-- imagem de lorempixel.com -->
-				<img src="http://lorempixel.com/960/320/city/4">
-				<!-- /imagem de lorempixel.com -->
-
-				<p>Parágrafo (do grego: paragraphos, "escrever ao lado" ou "escrito ao lado") é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular.</p>
-			</a>
-		</li>
-	</ul>
-</div>
 <div class="content-block">
 	<ul class="column-group gutters">
 		<li class="all-100 large-33 xlarge-33">
@@ -265,11 +231,36 @@
 		</li>
 	</ul>
 </div>
-
-			</div>
-		</section>
-		<!-- end CONTEÚDO -->
-
+<div class="content-block">
+	<ul class="column-group gutters">
+		<li class="all-100 large-33 xlarge-33">
+			<a href="article-detail.html">
+				<!-- imagem de lorempixel.com -->
+				<img src="http://lorempixel.com/960/320/sports/2">
+				<!-- /imagem de lorempixel.com -->
+				<p>Parágrafo (do grego: paragraphos, "escrever ao lado" ou "escrito ao lado") é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular.</p>
+			</a>
+		</li>
+		<li class="all-100 large-33 xlarge-33">
+			<a href="article-detail.html">
+				<!-- imagem de lorempixel.com -->
+				<img src="http://lorempixel.com/960/320/sports/3">
+				<!-- /imagem de lorempixel.com -->
+				<p>Parágrafo (do grego: paragraphos, "escrever ao lado" ou "escrito ao lado") é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular.</p>
+			</a>
+		</li>
+		<li class="all-100 large-33 xlarge-33">
+			<a href="article-detail.html">
+				<!-- imagem de lorempixel.com -->
+				<img src="http://lorempixel.com/960/320/sports/5">
+				<!-- /imagem de lorempixel.com -->
+				<p>Parágrafo (do grego: paragraphos, "escrever ao lado" ou "escrito ao lado") é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular.</p>
+			</a>
+			
+		</li>
+	</ul>
+</div>
+		<!-- end CONTEÚDO DO LAYOUT DEFAULT -->
 
 		<!-- RODAPÉ -->
 		<footer id="footer">
@@ -287,7 +278,7 @@
 	<a href="page1.html">page1</a>
 </li>
 
-<li class="page2 active">
+<li class="page2 ">
 	<a href="page2.html">page2</a>
 </li>
 
@@ -295,7 +286,7 @@
 	<a href="page3.html">page3</a>
 </li>
 
-<li class="page4 ">
+<li class="page4 active">
 	<a href="page4.html">page4</a>
 </li>
 
@@ -549,10 +540,8 @@
 			</div>
 		</footer>
 		<!-- end RODAPÉ -->
-
-
 	</div>
-	<!-- end CONTENT DRAWER -->
+	<!-- end OVERAL PAGE -->
 
 	<!-- JAVASCRIPT -->
 	<script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.9/js/ink-all.min.js"></script>
