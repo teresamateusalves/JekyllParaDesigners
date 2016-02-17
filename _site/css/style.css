@@ -73,18 +73,36 @@ a:active {
   color: #650f0f;
 }
 /* Elastic STRUCTURE | Show/Hide */
+body.ink-drawer .content-drawer #header .btn-menu-show {
+  text-align: right;
+  padding: 2.5em 0;
+}
 @media screen and (min-width: 768px) {
   body.ink-drawer .content-drawer #header .btn-menu-show {
     display: none;
   }
 }
-body.ink-drawer .content-drawer .ink-navigation {
+body.ink-drawer .content-drawer #header .top-search {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  body.ink-drawer .content-drawer .ink-navigation {
+  body.ink-drawer .content-drawer #header .top-search {
     display: block;
   }
+}
+body.ink-drawer .content-drawer #top-menu,
+body.ink-drawer .content-drawer .footer-menu {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  body.ink-drawer .content-drawer #top-menu,
+  body.ink-drawer .content-drawer .footer-menu {
+    display: block;
+  }
+}
+body.ink-drawer .right-drawer .search {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 .ink-grid {
   width: 100%;
@@ -108,9 +126,6 @@ body.ink-drawer .content-drawer .ink-navigation {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 /* MENUS */
-#top-menu {
-  margin-bottom: 2em;
-}
 nav.ink-navigation ul li.active a {
   background: #f9f9f9;
   text-decoration: none;
@@ -145,6 +160,9 @@ nav.ink-navigation ul.social-menu li a span {
   overflow: hidden;
 }
 /* CONTENT */
+.page-contents {
+  margin-top: 2em;
+}
 h2.page-title {
   display: block;
   position: absolute;

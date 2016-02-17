@@ -66,6 +66,17 @@
 	<div class="right-drawer drawer">
 		<!-- MENU ITEMS -->
 		<nav class="ink-navigation">
+			<div class="search vertical-space">
+    <form class="ink-form">
+        <!-- Append button -->
+        <div class="control-group">
+            <div class="control append-button" role="search">
+                <span><input type="text" name="name" id="name"></span>
+                <button class="ink-button">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
 			<ul class="menu vertical drawer-menu">	
 				
 <li class="homepage ">
@@ -109,12 +120,15 @@
 		<div id="header">
 			<div class="ink-grid">
 
-				<!-- IDENTIFICAÇÃO DO PROJECTO -->
 				<div class="column-group">
+
+					<!-- IDENTIFICAÇÃO DO PROJECTO -->
 					<div class="site-id all-70">
 						<h1><a href="/">Site name</a></h1>
 						<p class="site-description">Site description</p>
 					</div>
+					<!-- end IDENTIFICAÇÃO DO PROJECTO -->
+
 					<div class="top-search all-30">
 
 						<div class="search vertical-space">
@@ -130,17 +144,15 @@
 </div>
 
 					</div>
+					<!-- BOTÃO "MENU" PARA ABRIR A "GAVETA" E MOSTRAR O MENU -->
+					<div id="btn-menu-show" class="btn-menu-show all-30">
+						<a id="open-drawer" class="right-drawer-trigger">
+							<span class="show-menu">Menu</span>
+						</a>
+					</div>
+					<!-- end BOTÃO "MENU" -->
 				</div>
-				<!-- end IDENTIFICAÇÃO DO PROJECTO -->
-
-				<!-- BOTÃO "MENU" PARA ABRIR A "GAVETA" E MOSTRAR O MENU -->
-				<div id="btn-menu-show" class="btn-menu-show">
-					<a id="open-drawer" class="right-drawer-trigger">
-						<span class="show-menu">Menu</span>
-					</a>
-				</div>
-				<!-- end BOTÃO "MENU" -->
-
+				
 			</div>
 		</div>
 		<!-- end CABEÇALHO DO SITE -->
@@ -181,7 +193,7 @@
 </li>
 
 
-						
+
 					</ul>
 				</nav>
 			</div>

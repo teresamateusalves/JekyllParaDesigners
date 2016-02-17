@@ -27,15 +27,22 @@ body.ink-drawer {
 			.ink-grid {}
 
 			.btn-menu-show {
+				text-align: right;
+				padding: 2.5em 0;
 				@media screen and (min-width:768px) {
 					display:none;
 				}
 			}
+			.top-search {
+				display:none;
+				@media screen and (min-width:768px) {
+					display:block;
+				}
+			}
 		}
 
-		.ink-navigation { // hides main menu & footer menu in smaller sizes
-			.ink-grid {}
-
+		#top-menu,
+		.footer-menu { 
 			display:none;
 			@media screen and (min-width:768px) {
 				display:block;
@@ -48,6 +55,13 @@ body.ink-drawer {
 
 		#footer {
 			.ink-grid {}
+		}
+	}
+
+	.right-drawer {
+		.search {
+			margin-left:0.5em;
+			margin-right:0.5em;
 		}
 	}
 }
@@ -76,10 +90,6 @@ body.ink-drawer {
 ///////////////////////////////////////
 /* MENUS */
 ///////////////////////////////////////
-#top-menu {
-	margin-bottom:2em;
-}
-
 nav.ink-navigation {
 
 	// Generic features common to all menus
@@ -173,7 +183,9 @@ nav.ink-navigation {
 ///////////////////////////////////////
 /* CONTENT */
 ///////////////////////////////////////
-
+.page-contents {
+	margin-top:2em;
+}
 // Títulos das páginas
 h2.page-title {
 	.hide-text();
