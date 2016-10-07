@@ -35,15 +35,15 @@
 	{% endif %}
 
 	<!-- ICONs -->
-	<link rel="icon" type="image/x-icon" href="imgs/icons/favicon.ico">
+	<!-- <link rel="icon" type="image/x-icon" href="imgs/icons/favicon.ico"> -->
 	<!-- add to home screen icons Android -->
-	<link rel="icon" sizes="192x192" href="imgs/icons/android-192.png">
+	<!-- <link rel="icon" sizes="192x192" href="imgs/icons/android-192.png">
 	<link rel="icon" sizes="144x144" href="imgs/icons/android-144.png">
 	<link rel="icon" sizes="96x96" href="imgs/icons/android-96.png">
 	<link rel="icon" sizes="72x72" href="imgs/icons/android-72.png">
-	<link rel="icon" sizes="48x48" href="imgs/icons/android-48.png">
+	<link rel="icon" sizes="48x48" href="imgs/icons/android-48.png"> -->
 	<!-- add to home screen icons iOS -->
-	<link rel="apple-touch-icon" sizes="180x180" href="imgs/icons/ios-180.png">
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="imgs/icons/ios-180.png">
 	<link rel="apple-touch-icon" sizes="167x167" href="imgs/icons/ios-167.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="imgs/icons/ios-152.png">
 	<link rel="apple-touch-icon" sizes="144x144" href="imgs/icons/ios-144.png">
@@ -52,119 +52,34 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="imgs/icons/ios-76.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="imgs/icons/ios-72.png">
 	<link rel="apple-touch-icon" sizes="60x0" href="imgs/icons/ios-60.png">
-	<link rel="apple-touch-icon" sizes="57x57" href="imgs/icons/ios-57.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="imgs/icons/ios-57.png"> -->
 
 	<!-- FONTS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200'>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400" rel="stylesheet">
 
-	<!-- INK STYLE -->
-	<link rel="stylesheet" type="text/css" href="https://ink.global.ssl.fastly.net/3.1.10/css/ink.min.css">
+	<!-- BOOTSTRAP STYLE -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- PROJECT STYLE-->
+	<!-- PROJECT STYLE -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body class="ink-drawer {{page.id}}">
+<body class="{{page.id}}">
 
-	<!-- MENU "ESCONDIDO" NA GAVETA -->
-	<div class="right-drawer drawer">
-		<!-- MENU ITEMS -->
-		<nav class="ink-navigation">
-			{% include search-form.html %}
-			<ul class="menu vertical drawer-menu">	
-				{% include menu_principal_itens.html %}
-			</ul>
-		</nav>
-	</div>
-	<!-- end MENU "ESCONDIDO" -->
+	{% include shared-header.html %}
 
-	<!-- OVERAL PAGE -->
-	<div class="overal-page content-drawer">
-
-		<!-- CABEÇALHO DO SITE -->
-		<div id="header">
-			<div class="ink-grid">
-
-				<div class="column-group">
-
-					<!-- IDENTIFICAÇÃO DO PROJECTO -->
-					<div class="site-id all-70">
-						<h1><a href="/">Site name</a></h1>
-						<p class="site-description">Site description</p>
-					</div>
-					<!-- end IDENTIFICAÇÃO DO PROJECTO -->
-
-					<div class="top-search all-30">
-
-						{% include search-form.html %}
-
-					</div>
-					<!-- BOTÃO "MENU" PARA ABRIR A "GAVETA" E MOSTRAR O MENU -->
-					<div id="btn-menu-show" class="btn-menu-show all-30">
-						<a id="open-drawer" class="right-drawer-trigger">
-							<span class="show-menu">Menu</span>
-						</a>
-					</div>
-					<!-- end BOTÃO "MENU" -->
-				</div>
-				
-			</div>
-		</div>
-		<!-- end CABEÇALHO DO SITE -->
-
-		<!-- MENU PRINCIPAL NO TOPO -->
-		<div id="top-menu">
-			<div class="ink-grid">
-				<nav class="ink-navigation">
-					<ul class="menu horizontal main-menu">
-
-						{% include menu_principal_itens.html %}
-
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<!-- end MENU PRINCIPAL NO TOPO -->
-
-		<!-- CONTEÚDO DO LAYOUT DEFAULT -->
+	<!-- CONTEÚDO -->
+	<div class="container">
 		{{ content }}
-		<!-- end CONTEÚDO DO LAYOUT DEFAULT -->
-
-		<!-- RODAPÉ -->
-		<footer id="footer">
-			<div class="ink-grid">
-
-				<!-- MENU PRINCIPAL NO RODAPÉ -->
-				<nav class="ink-navigation">
-					<ul class="menu horizontal footer-menu">
-					   {% include menu_principal_itens.html %}
-					</ul>
-				</nav>
-				<!-- end MENU PRINCIPAL NO RODAPÉ -->
-
-				{% include menu_social.html %}
-
-				<div class="tools">
-					<p>Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="http://ink.sapo.pt/">Ink</a></p>
-				</div>
-
-			</div>
-		</footer>
-		<!-- end RODAPÉ -->
-
 	</div>
-	<!-- end OVERAL PAGE -->
+	<!-- end CONTEÚDO -->
+
+	{% include shared-footer.html %}
 
 	<!-- JAVASCRIPT -->
-	<script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.9/js/ink-all.min.js"></script>
-	<script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.1/js/autoload.js"></script>
-
-	<!--[if IE 8]>
-	<script type="text/javascript" src="http://imgs.sapo.pt/ink/assets/js/html5shiv.js"></script>
-	<script type="text/javascript" src="http://imgs.sapo.pt/ink/assets/js/html5shiv-printshiv.js"></script>
-	<script type="text/javascript" src="http://imgs.sapo.pt/ink/assets/js/respond.src.js"></script> 
-	<![endif]-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>

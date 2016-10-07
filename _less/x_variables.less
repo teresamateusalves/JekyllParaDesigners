@@ -66,8 +66,19 @@
 ////////////////////////////////////////////
 //// FONTS
 ////////////////////////////////////////////
+@content-font:'Roboto', sans-serif;
+@title-font:'Roboto Slab', serif;
+
+.content-font() {
+	font-family:@content-font;
+	font-weight:300;
+}
+.titles-font() {
+	font-family:@title-font;
+	font-weight:400;
+}
 .metadata-font() {
-	font-family:'Roboto',Arial,Helvetica,sans-serif;
+	font-family:@content-font;
 	font-weight:300;
 	text-transform:uppercase;
 	letter-spacing:1px;

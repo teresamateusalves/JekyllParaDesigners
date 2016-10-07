@@ -1,6 +1,6 @@
 @import "x_reset.less";
 @import "x_variables.less";
-@import "x_mixins.less";
+@import "x_mixins.less";      
 ///////////////////////////////////////
 
 /* 
@@ -8,72 +8,24 @@ TERESA ALVES | trezalves.com/Jekyll
 */
 
 ///////////////////////////////////////
-html { font-size:1em; background-color:@lighter-grey; }
+html { 
+	font-size:1em; 
+	background-color:@lighter-grey; 
+	.no-space-around();
+	body {
+		.no-space-around();
+	}
+}
 
 a {
 	color:@main-color;
 	&:hover, &:focus, &:active {
 		color:darken(@main-color,20%); 
-	}
+    }
 }
 
-
-///////////////////////////////////////
-/* Elastic STRUCTURE | Show/Hide */
-///////////////////////////////////////
-body.ink-drawer {
-
-	.drawer {}
-
-	.content-drawer {
-
-		#header {
-			.ink-grid {}
-
-			.btn-menu-show {
-				text-align: right;
-				padding: 2.5em 0;
-				@media screen and (min-width:768px) {
-					display:none;
-				}
-			}
-			.top-search {
-				display:none;
-				@media screen and (min-width:768px) {
-					display:block;
-				}
-			}
-		}
-
-		#top-menu,
-		.footer-menu { 
-			display:none;
-			@media screen and (min-width:768px) {
-				display:block;
-			}
-		}
-
-		.page-contents {
-			.ink-grid {}
-		}
-
-		#footer {
-			.ink-grid {}
-		}
-	}
-
-	.right-drawer {
-		.search {
-			margin-left:0.5em;
-			margin-right:0.5em;
-		}
-	}
-}
-.ink-grid {
-	.max-width();
-}
-.top-search {
-	float:right;
+h1, h2, h3, h4, h5, h6 {
+	.titles-font();
 }
 
 ///////////////////////////////////////
@@ -81,103 +33,31 @@ body.ink-drawer {
 ///////////////////////////////////////
 #header {
 	background:@light-grey;
-}
-#top-menu {
-	background:@light-grey;
 	border-bottom:@dark-border;
+	padding:2em 0;
+
+
 }
 #footer {
 	background:@light-grey;
 	border-top:@dark-border;
-}
+	padding:2em 0;
 
-///////////////////////////////////////
-/* MENUS */
-///////////////////////////////////////
-nav.ink-navigation {
-
-	// Generic features common to all menus
-	ul {
+	ul.team {
 		li {
-			a {
-				&:hover, &:focus, &:active {
-
+			.photo {
+				padding:2em;
+				img {
+					display:block;
+					.round-border();
+					max-width:100%; height:auto;
 				}
 			}
-		}
-		li.active {
-			a {
-				background:@almost-white;
-				text-decoration:none;
-				&:hover, &:focus, &:active {
-					cursor:default;
-				}
-			}
-		}
-	}
-	
-	// Specific Overrides
-	ul.drawer-menu {
-		li {
-			a {
-				&:hover, &:focus, &:active {
-					
-				}
-			}
-		}
-		li.active {
-			a {
-				&:hover, &:focus, &:active {
-					
-				}
-			}
-		}
-	}
-
-	ul.main-menu {
-
-		li {
-			a {
-				&:hover, &:focus, &:active {
-					
-				}
-			}
-		}
-		li.active {
-			a {
-				
-			}
-		}
-	}
-
-	ul.footer-menu {
-		text-align:center;
-		li {
-			float:none !important; display:inline-block;
-			a {
-				&:hover, &:focus, &:active {
-					
-				}
-			}
-		}
-		li.active {
-			a {
-				&:hover, &:focus, &:active {
-					
-				}
-			}
-		}
-	}
-
-	ul.social-menu {
-		border-top:@dark-border;
-		border-bottom:@dark-border;
-		text-align:center;
-		li {
-			float:none !important; display:inline-block;
-			a {
-				span {  
-					.hide-text();
+			p {
+				text-align:center;
+				&.highlight {
+					.titles-font();
+					font-size:1.5em;
 				}
 			}
 		}
@@ -185,52 +65,3 @@ nav.ink-navigation {
 }
 
 
-///////////////////////////////////////
-/* CONTENT */
-///////////////////////////////////////
-.page-contents {
-	margin-top:2em;
-}
-// Títulos das páginas
-h2.page-title {
-	.hide-text();
-}
-
-// Imagens
-img {
-	margin:0 auto 1em;
-}
-
-// Highlights
-.highlight {
-	margin-bottom:2em;
-}
-
-// texto nos blocos pequenos
-.content-block {
-	p {
-		font-size:0.85em;
-	}
-}
-
-// text preto em parágrafos dentro de <a>
-a {
-	p {
-		color:@almost-black;
-	}
-	&:hover, &:focus, &:active {
-		p {
-			color:@main-color;
-		}				
-	}
-}
-
-.tools {
-	text-align:center;
-	.metadata-font();
-	font-size:11px;
-	font-weight:bold;
-	p {
-		margin:1em 0;
-	}
-}
