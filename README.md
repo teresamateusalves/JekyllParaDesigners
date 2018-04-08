@@ -1,5 +1,5 @@
 # Jekyll para designers
-Sites estáticos num instante
+Como começar a utilizar Jekyll, passo a passo.
 
 
 ## O que é isto
